@@ -7,5 +7,5 @@ import { SingleEntryComponent } from './single-entry/single-entry.component';
 //exportar routes y son un array
 export const routes: Routes = [
   {path: '',component: EntryListComponent},
-  {path: 'journalInfo/:id', component: SingleEntryComponent }
+  {path: 'journalInfo/:id', component:SingleEntryComponent }
 ]

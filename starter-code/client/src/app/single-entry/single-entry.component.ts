@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { JournalService } from '../../services/journal.service';
 //component de id se usa ActivatedRoute
 import { ActivatedRoute } from '@angular/router';
-import { EntryListComponent } from '../entry-list/entry-list.component';
+import { EntryListComponent } from '../entry-list/entry-list.component'
 
 @Component({
   selector: 'app-single-entry',
