@@ -8,6 +8,10 @@ const layouts      = require('express-ejs-layouts');
 const mongoose     = require('mongoose');
 const cors         = require('cors');
 
+//Para solicitar las rutas
+const journal = require('./routes/api/journal-entries');
+
+
 mongoose.connect('mongodb://localhost/journal-development');
 
 const app = express();
@@ -31,6 +35,9 @@ app.use(layouts);
 
 const index = require('./routes/index');
 app.use('/', index);
+//decir que journal empieza desde el url localhost:300/api
+app.use('/api/', journal);
+
 
 app.all('/*', function (req, res) {
   res.sendfile(__dirname + '/public/index.html');

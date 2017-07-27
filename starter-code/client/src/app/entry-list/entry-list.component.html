@@ -1,0 +1,11 @@
+<p>
+  entry-list works!
+</p>
+<!-- entry declarando variable y journal es el nombre del Array -->
+<div *ngFor = "let entry of journal">
+  <div class="journal">
+    <h3>{{entry.title}}</h3>
+    <label for="date">{{entry.date}}</label>
+  </div>
+
+</div>
