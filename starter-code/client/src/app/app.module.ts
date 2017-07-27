@@ -5,22 +5,28 @@ import { HttpModule } from '@angular/http';
 //Import Router
 import { RouterModule } from '@angular/router';
 
+//así como se exporta se tiene que importar
+import { routes } from './routes';
 
 import { AppComponent } from './app.component';
 
 // import { EntryListComponent } from './entry-list/entry-list.component';
 import { JournalService } from '../services/journal.service';
 import { EntryListComponent } from './entry-list/entry-list.component';
+import { SingleEntryComponent } from './single-entry/single-entry.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EntryListComponent
+    EntryListComponent,
+    SingleEntryComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    //Router MODULE que no se te olvide
+    RouterModule.forRoot(routes)
   ],
   providers: [ JournalService ],
   bootstrap: [AppComponent]
